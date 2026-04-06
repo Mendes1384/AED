@@ -1,0 +1,11 @@
+[
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Atleta.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Atleta.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/MainMaratona.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/MainMaratona.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Info.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Info.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Int.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Int.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/IteradorVetor.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/IteradorVetor.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Par.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Par.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/SequenciaVetor.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/SequenciaVetor.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Util.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Util.c"] },
+  { "directory": "/home/mendes/Desktop/AED/P5_Maratona", "file": "s/Vetor.c", "arguments": ["gcc", "-I", "h", "-Wall", "-Wextra", "-c", "s/Vetor.c"] }
+]
