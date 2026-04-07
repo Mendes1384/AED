@@ -4,6 +4,7 @@
 
 #include "Conjunto.h"
 #include "Sequencia.h"
+#include "Int.h"
 
 
 /*------------------------------------------*/
@@ -46,6 +47,51 @@ Conjunto criaConjunto(void){
 	c->info = criaInfo("Conjunto", destroiConjunto, destroiTudoConjunto,
 							comparaConjunto, NULL, debugConjunto);
 	c->elems = criaSequencia();
+	return c;
+}
+
+/*Conjunto criaIntConjunto(int v[]){
+	Conjunto c = criaConjunto();
+	Sequencia s = criaSequencia(); 
+	int tam = 0, i = 0;
+	
+	while(v[i] != -1){
+		Int num = criaInt(v[i++]);
+		acrescentaSequencia(s, num);
+	}
+	c->elems = s;
+
+	return c;
+}
+
+void mostraConjunto(Conjunto c){
+	int tam = tamanhoSequencia(c->elems);
+	for(int i = 0; i < tam; i++)
+		printf("%d ", elementoSequencia(c->elems, i));
+
+	printf("\n");
+}*/
+
+Conjunto uniaoConjunto(Conjunto a, Conjunto b){
+	vetor v = criaSequencia();
+	int tam = tamanhoSequencia(a->elems);
+
+	for(int i = 0; i < tam; i++){
+		acrescentaSequencia(v, elementoSequencia(a->elems, i));
+	}
+
+	int tam2 = tamanhoSequencia(b->elems);
+
+	for(int i = 0; i < tam2; i++){
+		int elm = procuraConjunto(a, elementoSequencia(b->elems, i));
+		if(elm == -1)
+			acrescentaSequencia(v, elementoSequencia(b->elems, i));		
+	}
+
+	ordenaVetor(v, tamanhoSequencia(v));
+
+	Conjunto c = criaIntConjunto(v);
+
 	return c;
 }
 
