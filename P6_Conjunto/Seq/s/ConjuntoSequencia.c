@@ -95,7 +95,40 @@ Conjunto uniaoConjunto(Conjunto a, Conjunto b){
 	return c;
 }
 
+Conjunto intersecaoConjunto(Conjunto a, Conjunto b){
+	vetor v = criaSequencia();
+	int tam = tamanhoSequencia(a->elems);
 
+	if(tam > tamanhoSequencia(b->elems))
+		tam = tamanhoSequencia(b->elems);
+	
+	for(int i = 0; i < tam; i++){
+		int elm = procuraConjunto(a, elementoSequencia(b->elems, i));
+		if(elm != -1)
+			acrescentaSequencia(v, elementoSequencia(b->elems, i));		
+	}
+	
+	ordenaVetor(v, tamanhoSequencia(v));
+	Conjunto c = criaIntConjunto(v);
+	
+	return c;
+}
+
+Conjunto diferencaConjunto(Conjunto a, Conjunto b){
+	vetor v = criaSequencia();
+	int tam = tamanhoSequencia(a->elems);
+
+	for(int i = 0; i < tam; i++){
+		int elm = procuraConjunto(b, elementoSequencia(a->elems, i));
+		if(elm == -1)
+			acrescentaSequencia(v, elementoSequencia(a->elems, i));		
+	}
+	
+	ordenaVetor(v, tamanhoSequencia(v));
+	Conjunto c = criaIntConjunto(v);
+	
+	return c;
+}
 // COMPLETAR
 
 
